@@ -1,7 +1,18 @@
 <template>
-  <div class="hello">
-    <div v-html='mdHtml' class="markdown-body" v-show='mdHtml.length>0'></div>
-  </div>
+  <el-container>
+    <el-aside width="200px">
+      <ul>
+        <li v-for='(Item,key) in navList' :key='key'>
+          <router-link :to="'/WutheringHeights/'+Item.filename">
+            {{Item.title}}
+          </router-link>
+        </li>
+      </ul>
+    </el-aside>
+    <el-main>
+      <div v-html='mdHtml' class="markdown-body" v-show='mdHtml.length>0'></div>
+    </el-main>
+  </el-container>
 </template>
 
 <script>
@@ -22,20 +33,33 @@ const md = new MarkdownIt({
 	}
 })
 export default {
-  name: 'HelloWorld',
+  name: 'wutheringHeights',
   data () {
     return {
+      navList: [],
       msg: 'Welcome to Your Vue.js App',
       mdHtml: []
     }
   },
   created: function () {
+    this.getJson()
     this.getmdHtml()
   },
   methods: {
+    getJson: function () {
+      const url = '/static/json/wutheringHeights.json';
+      axios.get(url).then(res => {
+        this.navList = res.data
+        console.log(res.data,'1', this.navList);
+      })
+      .catch(err => {
+        console.log(err);
+      })
+    },
     getmdHtml: function () {
       const url = '/static/md/wutheringHeights/day-one.md'
       axios.get(url).then(res => {
+        console.log(res,'2');
         this.mdHtml = md.render(res.data)
       })
       .catch(err => {
