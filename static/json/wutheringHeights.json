@@ -1,7 +1,10 @@
 [{
-  "title": "day-one",
-  "filename": "day-one.md"
-}, {
-  "title": "day-two",
-  "filename": "day-two.md"
+  "title": "第一章",
+  "subNav": [{
+    "title": "day-one",
+    "filename": "day-one.md"
+  }, {
+    "title": "day-two",
+    "filename": "day-two.md"
+  }]
 }]

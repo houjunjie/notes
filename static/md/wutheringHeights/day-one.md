@@ -47,13 +47,13 @@ the housekeeper of Wuthering Heights
 > I am delighted with the house I am renting from him.
 	原文出处：《第一章 洛克伍德先生造访呼啸山庄（一）》
 
-**拓展：**词组“`be happy with...`”;“`be pleased with...`”也可以用来表达“`对.....感到高兴`”。
+**拓展：** 词组“`be happy with...`”;“`be pleased with...`”也可以用来表达“`对.....感到高兴`”。
 
 3. **suit： v. 某物合某人心意**
 > "That suits me perfectly"
 	原文出处：《第一章 洛克伍德先生造访呼啸山庄（一）》
 
-4. *scenery: n. 风景，景色***
+4. **scenery: n. 风景，景色**
 >	"And the scenery here in Yorjshire is so beautiful"
 	原文出处：《第一章 洛克伍德先生造访呼啸山庄（一）》
 
@@ -89,7 +89,7 @@ Sightseeing is best done either by tour bus or by bicycles.（观光最好要么
 > “He said nothing, but frowned...”
 原文出处：《第一章 洛克伍德先生造访呼啸山庄（一）》
 
-**解读：**大家一般都会对不喜欢、不赞成的事情皱眉吧？所以这个单词也有“`不喜欢，不赞成`”的含义，通常与`on`、`upon`连用。
+**解读：** 大家一般都会对不喜欢、不赞成的事情皱眉吧？所以这个单词也有“`不喜欢，不赞成`”的含义，通常与`on`、`upon`连用。
 
 例如：
 She frowns on gambling.（她讨厌赌博。）
@@ -98,7 +98,7 @@ She frowns on gambling.（她讨厌赌博。）
 > “And bring up some wine from the cellar!”
 原文出处：《第一章 洛克伍德先生造访呼啸山庄（一）》
 
-**拓展**：除了句中的意思，“bring up”还有两个常见释义。
+**拓展：** 除了句中的意思，“bring up”还有两个常见释义。
 
 1）抚养，养育。
 例如：
@@ -112,7 +112,7 @@ He brought up a question for discussion.（他提出问题讨论。）
 > “Joseph was a very old servant, with a sour expression on his face.”
 原文出处：《第一章 洛克伍德先生造访呼啸山庄（一）》
 
-**解读**：这里的“sour”不是“酸”的意思，而是表示Joseph这个人“脸上的表情不友善”。
+**解读：** 这里的“sour”不是“酸”的意思，而是表示Joseph这个人“脸上的表情不友善”。
 
 10. **crossly：adv. 生气地，发怒地**
 
@@ -141,7 +141,7 @@ He brought up a question for discussion.（他提出问题讨论。）
 > “The name 'Earnshaw' is cut into a stone over the front door.”
 原文出处：《第一章 洛克伍德先生造访呼啸山庄（一）》
 
-**解读**：“cut into”还表示“插嘴，打断”。
+**解读：** “cut into”还表示“插嘴，打断”。
 
 例如：
 She cut into our conversation several times.（她几次打断我们的谈话。）
@@ -151,7 +151,7 @@ She cut into our conversation several times.（她几次打断我们的谈话。
 > “... except that there was no sign of cooking, and no farmer sitting at the table.”
 原文出处：《第一章 洛克伍德先生造访呼啸山庄（一）》
 
-**解读**：本句中的except作连词，后面接句子
+**解读：** 本句中的except作连词，后面接句子
 而“except”还常作介词，用于引出陈述中唯一不适用的事物、情形、人物或想法。
 
 例如：
@@ -173,7 +173,7 @@ I'm a professional and I have to conduct myself in a professional manner.（我�
 > “He could perhaps take more care with his appearance, but he is handsome.”
 原文出处：《第一章 洛克伍德先生造访呼啸山庄（一）》
 
-**解读**：这句话是Lockwood在评价Heathcliff外貌时的建议，意思是“Heathcliff还可以对自己的外表再多上点心，但已经算得上英俊了。”
+**解读** ：这句话是Lockwood在评价Heathcliff外貌时的建议，意思是“Heathcliff还可以对自己的外表再多上点心，但已经算得上英俊了。”
 
 来张1992年的电影截图给大家感受下Heathcliff的颜值：
 <!-- ![Heathcliff](Heathcliff.webp) -->

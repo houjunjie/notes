@@ -35,6 +35,10 @@ export default {
 </script>
 
 <style>
+@import 'github-markdown-css';
+.el-menu{
+  padding: 0;
+}
 .el-header{
   position: fixed;
   top: 0;
@@ -44,6 +48,50 @@ export default {
 }
 .el-main{
   padding-top: 70px;
+}
+.active a {
+    color: #039be5;
+}
+
+.aside-inner::-webkit-scrollbar {
+    width: 4px;
+}
+
+.aside-inner::-webkit-scrollbar-track {
+    height: 30px;
+}
+
+.aside-inner::-webkit-scrollbar-button {
+    display: none;
+}
+
+.aside-inner::-webkit-scrollbar-thumb {
+    background: #B7B7B7;
+    border-radius: 4px;
+}
+.el-aside{
+  padding-top: 70px;
+  position: relative;
+}
+.aside-inner {
+  position: fixed;
+  width: 168px;
+  height: 85%;
+  padding: 16px;
+  margin: 0;
+  background-color: #F7F7F7;
+  overflow-y: auto;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+a{
+  text-decoration: none;
 }
 /* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -80,5 +128,5 @@ export default {
     font-weight: bold;
     color: gray;
 }
-@import 'github-markdown-css'
+
 </style>

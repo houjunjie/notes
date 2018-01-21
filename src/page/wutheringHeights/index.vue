@@ -1,13 +1,20 @@
 <template>
   <el-container>
     <el-aside width="200px">
-      <ul>
-        <li v-for='(Item,key) in navList' :key='key'>
-          <router-link :to="'/WutheringHeights/'+Item.filename">
-            {{Item.title}}
-          </router-link>
-        </li>
-      </ul>
+      <div class="aside-inner">
+        <div v-for='(item, i) in navList' :key='i'>
+          <!--侧边导航  -->
+          <span>{{item.title}}</span>
+          <ul>
+            <li v-for='(subItem,key) in item.subNav' :key='key'
+            @click="handleClick(subItem.filename)">
+              <router-link :to="'/WutheringHeights/'+subItem.filename">
+                {{subItem.title}}
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </el-aside>
     <el-main>
       <div v-html='mdHtml' class="markdown-body" v-show='mdHtml.length>0'></div>
@@ -43,7 +50,8 @@ export default {
   },
   created: function () {
     this.getJson()
-    this.getmdHtml()
+
+    this.handleClick(this.$route.params.filename)
   },
   methods: {
     getJson: function () {
@@ -56,8 +64,8 @@ export default {
         console.log(err);
       })
     },
-    getmdHtml: function () {
-      const url = '/static/md/wutheringHeights/day-one.md'
+    getmdHtml: function (filename) {
+      const url = `/static/md/wutheringHeights/${filename}`
       axios.get(url).then(res => {
         console.log(res,'2');
         this.mdHtml = md.render(res.data)
@@ -65,6 +73,9 @@ export default {
       .catch(err => {
         console.log(err)
       })
+    },
+    handleClick: function (filename) {
+      this.getmdHtml(filename)
     }
   }
 }
@@ -72,18 +83,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
