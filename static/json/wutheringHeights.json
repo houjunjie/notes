@@ -1,10 +1,13 @@
 [{
   "title": "第一章",
   "subNav": [{
-    "title": "day-one",
-    "filename": "day-one.md"
+    "title": "洛克伍德先生造访呼啸山庄（一）（二）",
+    "filename": "day-1.md"
   }, {
-    "title": "day-two",
-    "filename": "day-two.md"
+    "title": "凯瑟琳·欧肖的房间（一）（二）",
+    "filename": "day-2.md"
+  }, {
+    "title": "第三章 艾伦·迪恩讲述的故事——凯瑟琳和希斯克利夫的童年",
+    "filename": "day-3.md"
   }]
 }]
