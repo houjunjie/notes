@@ -45,6 +45,7 @@ export default {
   left: 0;
   width: 100%;
   padding: 0;
+  z-index: 100001;
 }
 .el-main{
   padding-top: 70px;
@@ -110,6 +111,9 @@ a{
 .el-aside ul li {
     line-height: 16px;
     margin: 8px 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .el-aside ul a {

@@ -25,6 +25,7 @@
 <script>
 import MarkdownIt from 'markdown-it'
 import axios from 'axios'
+import { log } from 'util';
 const md = new MarkdownIt({
   html: true,
 	linkify: true,
@@ -50,7 +51,6 @@ export default {
   },
   created: function () {
     this.getJson()
-
     this.handleClick(this.$route.params.filename)
   },
   methods: {

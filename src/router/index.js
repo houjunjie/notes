@@ -17,7 +17,7 @@ export default new Router({
       component: WutheringHeights,
       children: [{
         path: '/WutheringHeights',
-        redirect: '/WutheringHeights/day-one.md'
+        redirect: '/WutheringHeights/day-1.md'
       }, {
         path: '/WutheringHeights/:filename',
         component: WutheringHeights
