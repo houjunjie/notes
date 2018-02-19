@@ -8,7 +8,7 @@
           <ul>
             <li v-for='(subItem,key) in item.subNav' :key='key'
             @click="handleClick(subItem.filename)">
-              <router-link :to="'/WutheringHeights/'+subItem.filename">
+              <router-link :to="'/'+state.active+'/'+subItem.filename">
                 {{subItem.title}}
               </router-link>
             </li>
@@ -26,6 +26,8 @@
 import MarkdownIt from 'markdown-it'
 import axios from 'axios'
 import { log } from 'util';
+import { mapState, mapMutations } from 'vuex'
+import { CHANGE_ACTIVE } from '../../store'
 const md = new MarkdownIt({
   html: true,
 	linkify: true,
@@ -40,6 +42,7 @@ const md = new MarkdownIt({
 		// return '';
 	}
 })
+
 export default {
   name: 'wutheringHeights',
   data () {
@@ -50,12 +53,26 @@ export default {
     }
   },
   created: function () {
-    this.getJson()
+    // this.getJson(this.$route.params.filename)
     this.handleClick(this.$route.params.filename)
+    // console.log(store);
+  },
+  computed: {
+    ...mapState({state: state => state})
+  },
+  watch: {
+    //监听路由，只要路由有变化(路径，参数等变化)都有执行下面的函数，你可以
+    $route: {
+      handler: function (val, oldVal) {
+        this.handleClick(this.$route.params.filename)
+      },
+      deep: true
+    }
   },
   methods: {
-    getJson: function () {
-      const url = '/static/json/wutheringHeights.json';
+    getJson: function (filename) {
+      let file = filename.substr(0, filename.indexOf('-'));
+      const url = '/static/json/'+file+'.json';
       axios.get(url).then(res => {
         this.navList = res.data
         console.log(res.data,'1', this.navList);
@@ -65,9 +82,9 @@ export default {
       })
     },
     getmdHtml: function (filename) {
-      const url = `/static/md/wutheringHeights/${filename}`
+      let file = filename.substr(0, filename.indexOf('-'));
+      const url = `/static/md/${file}/${filename}`
       axios.get(url).then(res => {
-        console.log(res,'2');
         this.mdHtml = md.render(res.data)
       })
       .catch(err => {
@@ -76,6 +93,7 @@ export default {
     },
     handleClick: function (filename) {
       this.getmdHtml(filename)
+      this.getJson(filename)
     }
   }
 }

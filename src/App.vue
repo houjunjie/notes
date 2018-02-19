@@ -9,8 +9,12 @@
         background-color="#545c64"
         text-color="#fff"
         active-text-color="#ffd04b">
-        <el-menu-item index="1">呼啸山庄</el-menu-item>
-        <el-menu-item index="2">呼啸山庄</el-menu-item>
+        <el-menu-item index="1">
+          呼啸山庄
+        </el-menu-item>
+        <el-menu-item index="2">
+          你不知道的JavaScript
+        </el-menu-item>
         <el-menu-item index="3">呼啸山庄</el-menu-item>
       </el-menu>
     </el-header>
@@ -19,6 +23,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+import { CHANGE_ACTIVE } from './store'
 export default {
   name: 'App',
   data() {
@@ -27,8 +33,12 @@ export default {
     }
   },
   methods: {
+    ...mapMutations([CHANGE_ACTIVE]),
     handleSelect(key, keyPath) {
-      console.log(key, );
+      const keyArr = ['wutheringHeights', 'ydnj']
+      // console.log(this.$store)
+      this.CHANGE_ACTIVE(keyArr[key-1])
+      this.$router.push({path: `/${keyArr[key-1]}`})
     }
   }
 }

@@ -156,3 +156,67 @@ cookie其实是一个字符串，但这个字符串中等号、分号、空格�
 - cookie推荐资源
   - [聊一聊 cookie](https://segmentfault.com/a/1190000004556040)
   - [HTTP cookies 详解](http://bubkoo.com/2014/04/21/http-cookies-explained/)
+
+
+---
+### localStorage(本地存储)
+---
+html5新方法，不过ie8及以上浏览器都兼容
+
+**特点**
+
+- 生命周期：持久化本地存储，除非主动删除数据，否则数据是永久不会过期的
+- 存储的信息在同一域中是共享的
+- 当本页操作（新增、修改、删除）了localStorage的时候，本页面不会触发storage事件，但是别的页面会触发storage事件
+- 大小：据说是5m（跟浏览器厂商有关）
+- 在非ie下的浏览中可以本地打开。ie浏览器要在服务器中打开
+- localStorage本质上是对字符串的读取，如果存储内容多的话会消耗内存空间，会导致页面变卡
+- localStorage受同源策略的限制
+
+设置
+
+`localStorage.setItem('username','ajie')`
+
+获取
+`localStorage.getItem('username')`
+也可以获取一个键名
+`localStorage.key(0)`
+
+删除
+
+`localStorage.removeItem('username')`
+也可以一次性清除所有存储
+`localStorage.clear()`
+
+storage事件
+
+当storage发生改变的时候出发。
+
+注意：当前页面对storage的操作会触发其他页面的storage事件
+
+时间的回调函数中有一个参数event，是一个StorageEvent对象，提供了一些实用的属性，如下表：
+| Property  | Type  | Description |
+| :---: | :---: | :---  |
+| key | String  | The named key was added, removed, or moddified  |
+| oldValue  | Any  | The previous value(now overwritten),or null if a new item was added  |
+| newValue  | Any  | The new value, or null if an item was added  |
+| url/uri  | String  | the page that called the method that triggered this change  |
+
+---
+---
+
+### sessionStorage
+---
+其实跟localStorage差不多，也是本地存储，会话本地存储
+
+**特点**
+- 用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。也就是说只要这个浏览器窗口没有关闭，即使刷新页面或进入同源另一页面，数据仍然存储。关闭窗口后，sessionStorage即被销毁，或者在新窗口打开同源的另一个页面，sessionStorage也是没有的
+
+### cookie，localStorage和sessionStorage区别
+- 相同：在本地（浏览器端）存储数据
+- 不同：
+  - localStorage、sessionStorage：localStorage只有在相同的协议，相同的主机名、相同的端口下，就能读取/修改到同一份localStorage数据。
+  - sessionStorage：sessionStorage比localStorage更严苛一点，除了协议、主机名、端口外，还要求在同一个窗口下（也就是浏览器的标签页）下
+  - localStorage是永久存储，除非手动删除
+  - sessionStorage是当前会话结束（即当前页面关闭的时候，自动销毁）
+  - cookie的数据会在每一次发送http请求的时候，同时发送给服务器而localStorage，sessionStorage不会

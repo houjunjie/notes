@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import VueResource from 'vue-resource'
-import WutheringHeights from '@/page/wutheringHeights'
+import Home from '@/page/home'
+// import youDonNotKnowJavascript from '@page/youDonNotKnowJavascript'
 
 Vue.use(Router)
 Vue.use(VueResource)
@@ -14,13 +15,24 @@ export default new Router({
     },
     {
       path: '/wutheringHeights',
-      component: WutheringHeights,
+      component: Home,
       children: [{
-        path: '/WutheringHeights',
-        redirect: '/WutheringHeights/day-1.md'
+        path: '/wutheringHeights',
+        redirect: '/wutheringHeights/wutheringHeights-1.md'
       }, {
-        path: '/WutheringHeights/:filename',
-        component: WutheringHeights
+        path: '/wutheringHeights/:filename',
+        component: Home
+      }]
+    },
+    {
+      path: '/ydnj',
+      component: Home,
+      children: [{
+        path: '/ydnj',
+        redirect: '/ydnj/ydnj-1.md'
+      }, {
+        path: '/ydnj/:filename',
+        component: Home
       }]
     }
   ]
