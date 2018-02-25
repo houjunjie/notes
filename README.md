@@ -5,8 +5,8 @@
 主要是最近在扇贝阅读上报了一个阅读计划。然后自己又有一个服务器想着把那些小抄弄到上来，然后方便以后去复习
 
 预览：
- - 一些笔记 [连接](http://ajie.online/notes)
- - 一个vue的阅读器（超级简陋的，只是练手） [连接](http://ajie.online/ireader)
+ - 一些笔记 [http://ajie.online/notes](http://ajie.online/notes)
+ - 一个vue的阅读器（超级简陋的，只是练手） [http://ajie.online/ireader](http://ajie.online/ireader)
 
 
 
