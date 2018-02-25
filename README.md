@@ -1,30 +1,16 @@
-# shanbay-read
+# notes
 
-> A Vue.js project
+这只是一个针对我个人在学习的时候的一些记录的项目。因为是针对我个人的。所以比较杂乱。
 
-## Build Setup
+主要是最近在扇贝阅读上报了一个阅读计划。想着把那些小抄弄到上来，然后方便以后去复习
 
-``` bash
-# install dependencies
-npm install
+**技术栈**
+  - vue
+  - element-ui (为了让界面好看一点点)
+  - html-loader、markdown-loader (webpack插件，用来解析md文件成文本格式)
+  - markdown-it (把解析成文本的md文件转成html)
 
-# serve with hot reload at localhost:8080
-npm run dev
+然后选择vue的原因呢，主要是最近刚好在学习。所以就选了。
 
-# build for production with minification
-npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

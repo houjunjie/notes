@@ -15,7 +15,7 @@
         <el-menu-item index="2">
           你不知道的JavaScript
         </el-menu-item>
-        <el-menu-item index="3">呼啸山庄</el-menu-item>
+        <el-menu-item index="3">傲慢与偏见</el-menu-item>
       </el-menu>
     </el-header>
     <router-view/>
@@ -57,9 +57,7 @@ export default {
   padding: 0;
   z-index: 100001;
 }
-.el-main{
-  padding-top: 70px;
-}
+
 .active a {
     color: #039be5;
 }

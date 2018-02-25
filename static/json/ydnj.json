@@ -2,45 +2,58 @@
   {
     "title": "第一章",
     "subNav": [{
-      "title": "）",
+      "title": "类型",
       "filename": "ydnj-1.md"
     }]
   }, {
     "title": "第二章",
     "subNav": [{
-      "title": "chapter",
+      "title": "值",
       "filename": "ydnj-2.md"
     }]
   }, {
     "title": "第三章",
     "subNav": [{
-      "title": "chapter",
+      "title": "原生函数",
       "filename": "ydnj-3.md"
     }]
   }, {
     "title": "第四章",
     "subNav": [{
-      "title": "chapter",
+      "title": "强制类型转换",
       "filename": "ydnj-4.md"
-    }, {
-      "title": "chapter",
-      "filename": "ydnj-5.md"
     }]
   }, {
     "title": "第五章",
     "subNav": [{
-      "title": "chapter",
-      "filename": "ydnj-6.md"
+      "title": "语法",
+      "filename": "ydnj-5.md"
     }]
   }, {
     "title": "第六章",
     "subNav": [{
-      "title": " chapter",
+      "title": " 异步：现在与将来",
+      "filename": "ydnj-6.md"
+    }]
+  }, {
+    "title": "第七章",
+    "subNav": [{
+      "title": "回调",
       "filename": "ydnj-7.md"
     }]
+  }, {
+    "title": "第八章",
+    "subNav": [{
+      "title": "Promise",
+      "filename": "ydnj-8.md"
+    }]
+  }, {
+    "title": "第九章",
+    "subNav": [{
+      "title": "生成器",
+      "filename": "ydnj-9.md"
+    }]
   }
-
-
 
 ]
 
