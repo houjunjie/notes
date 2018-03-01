@@ -382,3 +382,101 @@ BFC的渲染规则
 BFC的使用场景
 
 他的很常用的一个应用场景就是解决边距重叠的问题。
+
+### what is doctype
+我们的html中，一般初始化如下代码。那`<!DOCTYPE html>`是干什么的？
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+当写`html`或者`xhtml`时，添加`doctype`声明非常重要。这样浏览器就能了解预期的文档类型，从而告知浏览器，要通过哪一种规范解析文档，确保文档在不同的浏览器中以相同的方式被解析。
+
+### 垂直居中
+使用flexbox,前提条件是可以使用flexbox
+
+```
+.box{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+```
+场景1：目标元素具有固定宽高
+
+将元素绝对定位的位置设置为50%/50%,并设置相应方向的负`margin`值`width + padding / 2` 和`height + padding / 2`
+
+```
+.parent{
+  position: relative;
+}
+.child{
+  position: absolute;
+  top:50%;
+  left:50%;
+
+  width:300px;
+  height:100px;
+  padding: 20px;
+
+  margin: -70px 0 0 -170px;
+}
+```
+或者将child元素绝对定位属性设置如下(left,right,top,bottom),然后使用`margin:auto;`来设置垂直居中
+```
+.parent{
+  position: relative;
+}
+.child{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+
+  width:300px;
+  height:100px;
+  padding: 20px;
+
+  margin: auto;
+}
+```
+
+### BFC
+什么是BFC，它就是页面上的一块隔离的渲染区域。容器里面的子元素的布局不会影响到外面的元素，反之亦然。那么它是如何形成的？
+  - 块元素( `overflow` 值不为 `visible`)
+  - 内联块元素( `display` 值为 `inline-block`)
+  - 浮动元素(`float` 值不为 `none`)
+  - 绝对定位元素( `position` 值为 `absolute` 或 `fixed`)
+  - `display`的值为`table-cell`, `table-caption`, `inline-block`中的任何一个。
+
+### 执行上下文
+每个函数被调用时，都会创建一个新的执行上下文。对于JavaScript引擎，每次对执行上下文调用都分两个阶段
+  - 创建阶段[当函数被调用，但是还未执行里面的代码]
+    - 创建`variables`, `functions`, `arguments`
+    - 确定 `this` 的值
+    - 创建作用域链 `Scope Chain`
+  - 激活 / 代码执行阶段
+    - 分配值，对函数的引用，执行代码
+也就是说，从概念上，我们可以将执行上下文表示为一个具有3个属性的对象:`executionContextObj`,这个对象在创建阶段生成
+```
+executionContextObj = {
+  'scopeChain': { }, // AO|VO + [[scope]]
+  'variableObject': { }, // function arguments / parameters, inner variable and function declarations
+  'this': { }
+}
+```
+以下，就是JavaScript引擎调用某函数时的伪过程：[在调用函数之前，创建一个执行上下文]
+  - 进入创建阶段
+    - 创建变量对象VO(variable object)
+      - 创建arguments对象，初始化参数的名和值，然后再arg对象中放一份副本s
